@@ -631,10 +631,168 @@ const Index = () => {
         </div>
       </section>
 
-      <div id="lead" className="container py-20 text-center text-white/30">
-        <Icon name="ChevronDown" size={28} className="mx-auto animate-bounce" />
-        <p className="mt-2 text-sm">Следующие блоки — по мере поступления</p>
-      </div>
+      {/* Блок 7 — Action: Инструмент + Доверие + Финальная заявка */}
+
+      {/* 7а — Профессиональный инструмент */}
+      <section className="relative overflow-hidden bg-ink py-20 lg:py-24">
+        <div className="absolute inset-0 z-0 bg-cover bg-center opacity-12"
+          style={{ backgroundImage: `url(https://cdn.poehali.dev/projects/8c4cf80a-9349-4672-946e-4b6b406c6262/files/50d521e5-c78c-48ad-aa06-a86ea7612ca0.jpg)` }}
+        />
+        <div className="absolute inset-0 z-0 bg-gradient-to-r from-ink via-ink/90 to-ink/60" />
+
+        <div className="container relative z-10">
+          <div className="grid items-center gap-10 lg:grid-cols-[1fr_1fr]">
+            <div>
+              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#1E3FBF]/40 bg-[#1E3FBF]/10 px-4 py-1.5 text-sm font-medium text-blue-300">
+                <Icon name="Wrench" size={14} />
+                Профессиональный инструмент
+              </div>
+              <h2 className="font-heading text-3xl font-bold uppercase leading-tight text-white sm:text-4xl lg:text-5xl">
+                Инструмент<br />и <span className="text-[#1E3FBF]">наборы</span>
+              </h2>
+              <p className="mt-5 text-lg leading-relaxed text-white/65">
+                Специальный инструмент для ремонта и обслуживания — дополнение к основному ассортименту. Один поставщик закрывает и расходники, и инструмент.
+              </p>
+              <div className="mt-7 grid grid-cols-2 gap-3 sm:grid-cols-3">
+                {[
+                  { icon: 'Pipette', label: 'Развальцовка' },
+                  { icon: 'Magnet', label: 'Съёмники' },
+                  { icon: 'Wrench', label: 'Ключи' },
+                  { icon: 'Settings2', label: 'Специнструмент' },
+                  { icon: 'Briefcase', label: 'Наборы для ремонта' },
+                  { icon: 'Package', label: 'Комплекты' },
+                ].map((t) => (
+                  <div key={t.label} className="flex items-center gap-3 rounded-lg border border-white/8 bg-[#242428] px-4 py-3">
+                    <Icon name={t.icon} size={16} className="shrink-0 text-blue-400" />
+                    <span className="text-sm font-medium text-white/80">{t.label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="overflow-hidden rounded-2xl border border-white/10">
+              <img
+                src="https://cdn.poehali.dev/projects/8c4cf80a-9349-4672-946e-4b6b406c6262/files/50d521e5-c78c-48ad-aa06-a86ea7612ca0.jpg"
+                alt="Профессиональный инструмент"
+                className="h-72 w-full object-cover lg:h-[400px]"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 7б — Блок доверия */}
+      <section className="bg-[#242428] py-16 lg:py-20">
+        <div className="container">
+          <div className="mb-10 text-center">
+            <h2 className="font-heading text-2xl font-bold uppercase tracking-tight text-white sm:text-3xl">
+              Почему B2B-клиенты выбирают <span className="text-[#1E3FBF]">Алекс Груп</span>
+            </h2>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                icon: 'Building2',
+                title: 'Работа только с B2B',
+                text: 'Автомагазины, СТО, автопарки, снабженцы — понимаем специфику каждого сегмента',
+                color: 'blue',
+              },
+              {
+                icon: 'MessageSquare',
+                title: 'Помощь в подборе',
+                text: 'Поможем подобрать нужные позиции по размеру, резьбе, типу — без лишних итераций',
+                color: 'red',
+              },
+              {
+                icon: 'Rocket',
+                title: 'Быстрый старт',
+                text: 'От первого запроса до прайса — в день обращения. Начать сотрудничество просто',
+                color: 'blue',
+              },
+              {
+                icon: 'FileText',
+                title: 'Прайс и условия',
+                text: 'Актуальный прайс, оптовые условия и индивидуальный подход под объём закупки',
+                color: 'red',
+              },
+            ].map((card) => (
+              <div key={card.title} className="rounded-xl border border-white/8 bg-ink p-6">
+                <div className={`mb-4 flex h-11 w-11 items-center justify-center rounded-lg ${card.color === 'blue' ? 'bg-[#1E3FBF]/20 text-blue-400' : 'bg-[#CC2222]/20 text-red-400'}`}>
+                  <Icon name={card.icon} size={20} />
+                </div>
+                <div className="font-heading text-sm font-bold uppercase tracking-wide text-white">{card.title}</div>
+                <div className="mt-2 text-sm leading-relaxed text-white/55">{card.text}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 7в — Финальный CTA */}
+      <section id="lead" className="bg-ink py-20 lg:py-28">
+        <div className="container">
+          <div className="mx-auto max-w-3xl text-center">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#CC2222]/40 bg-[#CC2222]/10 px-4 py-1.5 text-sm font-medium text-red-400">
+              <Icon name="Target" size={14} />
+              Для автомагазинов, СТО, автопарков и снабженцев
+            </div>
+            <h2 className="font-heading text-3xl font-bold uppercase leading-tight text-white sm:text-4xl lg:text-5xl">
+              Готовы начать<br />
+              <span className="text-[#1E3FBF]">работать вместе?</span>
+            </h2>
+            <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-white/60">
+              Отправьте запрос — пришлём прайс, расскажем об условиях и ответим на вопросы по ассортименту. Без лишних шагов.
+            </p>
+
+            {/* Три CTA */}
+            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+              <a href="#lead" className="group w-full inline-flex items-center justify-center gap-2 rounded-md bg-[#1E3FBF] px-8 py-4 text-base font-bold text-white shadow-lg shadow-blue-900/40 transition-transform hover:-translate-y-0.5 sm:w-auto">
+                <Icon name="HandshakeIcon" fallback="Handshake" size={18} />
+                Получить оптовые условия
+              </a>
+              <a href="#lead" className="group w-full inline-flex items-center justify-center gap-2 rounded-md border border-white/25 px-8 py-4 text-base font-medium text-white transition-colors hover:border-[#1E3FBF] hover:text-blue-300 sm:w-auto">
+                <Icon name="Download" size={18} />
+                Запросить прайс
+              </a>
+              <a href="#lead" className="group w-full inline-flex items-center justify-center gap-2 rounded-md bg-[#CC2222] px-8 py-4 text-base font-bold text-white shadow-lg shadow-red-900/30 transition-transform hover:-translate-y-0.5 sm:w-auto">
+                <Icon name="Send" size={18} />
+                Оставить заявку
+              </a>
+            </div>
+
+            {/* Мини-доверие */}
+            <div className="mt-12 flex flex-wrap items-center justify-center gap-8 border-t border-white/10 pt-10">
+              {[
+                { value: '193+', label: 'товарных групп' },
+                { value: '17', label: 'разделов каталога' },
+                { value: 'B2B', label: 'только опт' },
+                { value: '1 день', label: 'до получения прайса' },
+              ].map((s) => (
+                <div key={s.label} className="text-center">
+                  <div className="font-heading text-2xl font-bold text-[#1E3FBF]">{s.value}</div>
+                  <div className="mt-0.5 text-xs text-white/40">{s.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Футер */}
+      <footer className="border-t border-white/8 bg-[#111113] py-8">
+        <div className="container flex flex-col items-center justify-between gap-4 sm:flex-row">
+          <div className="flex items-center">
+            <img
+              src="https://cdn.poehali.dev/projects/8c4cf80a-9349-4672-946e-4b6b406c6262/bucket/d0921144-cb7b-428c-bb5f-84821a76384c.JPG"
+              alt="Alex Group"
+              className="h-10 w-auto object-contain"
+            />
+          </div>
+          <div className="text-xs text-white/30">
+            © 2025 Алекс Груп — оптовый поставщик автотоваров
+          </div>
+          <div className="text-xs text-white/30">Владивосток</div>
+        </div>
+      </footer>
     </div>
   );
 };
