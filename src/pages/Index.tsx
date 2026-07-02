@@ -197,6 +197,110 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Блок 3 — Desire: Пневмо и соединения */}
+      <section className="relative overflow-hidden bg-ink py-20 lg:py-28">
+        {/* фоновое фото */}
+        <div
+          className="absolute inset-0 z-0 bg-cover bg-center opacity-15"
+          style={{ backgroundImage: `url(https://cdn.poehali.dev/projects/8c4cf80a-9349-4672-946e-4b6b406c6262/files/71855a1a-a17f-4ebd-a3db-9892efaf50d0.jpg)` }}
+        />
+        <div className="absolute inset-0 z-0 bg-gradient-to-r from-ink via-ink/95 to-ink/70" />
+
+        <div className="container relative z-10">
+          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+
+            {/* Левая часть — текст */}
+            <div>
+              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#CC2222]/40 bg-[#CC2222]/10 px-4 py-1.5 text-sm font-medium text-red-400">
+                <Icon name="Star" size={14} />
+                Ключевая товарная группа
+              </div>
+
+              <h2 className="font-heading text-3xl font-bold uppercase leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
+                Пневмо&shy;системы<br />
+                и <span className="text-[#1E3FBF]">соединения</span>
+              </h2>
+
+              <p className="mt-5 text-lg leading-relaxed text-white/65">
+                Профессиональные решения для пневмосистем — одна из сильнейших групп нашего ассортимента. Всё, что нужно для сборки, обслуживания и ремонта воздушных магистралей.
+              </p>
+
+              {/* Позиции */}
+              <div className="mt-7 flex flex-wrap gap-2">
+                {['Быстросъёмы', 'Евроразъёмы', 'Переходники', 'Соединители', 'Адаптеры'].map((item) => (
+                  <span
+                    key={item}
+                    className="rounded-md border border-[#1E3FBF]/40 bg-[#1E3FBF]/10 px-3 py-1.5 text-sm font-medium text-blue-300"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+
+              {/* Выгоды */}
+              <div className="mt-8 space-y-4">
+                {[
+                  { icon: 'Ruler', text: 'Широкий размерный ряд — от миниатюрных до крупных промышленных исполнений' },
+                  { icon: 'Settings', text: 'Разные типы резьб и исполнений под любое оборудование' },
+                  { icon: 'Wrench', text: 'Востребованные позиции для ремонта и сервиса — всегда в наличии' },
+                  { icon: 'Building2', text: 'Удобно для СТО и автомагазинов: закупка от одной упаковки' },
+                ].map((item) => (
+                  <div key={item.text} className="flex items-start gap-3">
+                    <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-[#1E3FBF]/20 text-blue-400">
+                      <Icon name={item.icon} size={16} />
+                    </span>
+                    <span className="text-sm leading-relaxed text-white/70">{item.text}</span>
+                  </div>
+                ))}
+              </div>
+
+              <a
+                href="#lead"
+                className="group mt-9 inline-flex items-center gap-2 rounded-md bg-[#1E3FBF] px-7 py-4 text-base font-bold text-white shadow-lg shadow-blue-900/40 transition-transform hover:-translate-y-0.5"
+              >
+                Запросить прайс на пневматику
+                <Icon name="ArrowRight" size={18} className="transition-transform group-hover:translate-x-1" />
+              </a>
+            </div>
+
+            {/* Правая часть — визуальная карточка */}
+            <div className="relative">
+              <div className="overflow-hidden rounded-2xl border border-white/10">
+                <img
+                  src="https://cdn.poehali.dev/projects/8c4cf80a-9349-4672-946e-4b6b406c6262/files/71855a1a-a17f-4ebd-a3db-9892efaf50d0.jpg"
+                  alt="Пневматические быстросъёмы и соединители"
+                  className="h-72 w-full object-cover lg:h-96"
+                />
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-ink/80 via-transparent to-transparent" />
+              </div>
+
+              {/* Плашка поверх фото */}
+              <div className="absolute bottom-5 left-5 right-5 rounded-xl border border-white/10 bg-ink/80 p-5 backdrop-blur-sm">
+                <div className="mb-1 text-xs font-semibold uppercase tracking-widest text-white/40">Профессиональные решения</div>
+                <div className="font-heading text-lg font-bold uppercase text-white">для пневмосистем</div>
+                <div className="mt-3 flex items-center gap-4">
+                  <div className="text-center">
+                    <div className="font-heading text-2xl font-bold text-[#1E3FBF]">100+</div>
+                    <div className="text-xs text-white/45">артикулов</div>
+                  </div>
+                  <div className="h-8 w-px bg-white/10" />
+                  <div className="text-center">
+                    <div className="font-heading text-2xl font-bold text-[#CC2222]">5</div>
+                    <div className="text-xs text-white/45">типов соединений</div>
+                  </div>
+                  <div className="h-8 w-px bg-white/10" />
+                  <div className="text-center">
+                    <div className="font-heading text-2xl font-bold text-blue-300">∞</div>
+                    <div className="text-xs text-white/45">в наличии</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       <div id="lead" className="container py-20 text-center text-white/30">
         <Icon name="ChevronDown" size={28} className="mx-auto animate-bounce" />
         <p className="mt-2 text-sm">Следующие блоки — по мере поступления</p>
