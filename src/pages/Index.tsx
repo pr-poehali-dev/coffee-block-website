@@ -415,6 +415,138 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Блок 5 — Desire: Фитинги, штуцеры, клапаны */}
+      <section className="relative overflow-hidden bg-ink py-20 lg:py-28">
+        <div className="absolute inset-0 z-0 bg-cover bg-center opacity-10"
+          style={{ backgroundImage: `url(https://cdn.poehali.dev/projects/8c4cf80a-9349-4672-946e-4b6b406c6262/files/d1e7118d-34a3-4fac-8c91-dafdd2212986.jpg)` }}
+        />
+        <div className="absolute inset-0 z-0 bg-gradient-to-l from-ink via-ink/95 to-ink/75" />
+
+        <div className="container relative z-10">
+
+          {/* Заголовок */}
+          <div className="mb-14 max-w-3xl">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#1E3FBF]/40 bg-[#1E3FBF]/10 px-4 py-1.5 text-sm font-medium text-blue-300">
+              <Icon name="Settings2" size={14} />
+              Техническая экспертиза
+            </div>
+            <h2 className="font-heading text-3xl font-bold uppercase leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
+              Фитинги, штуцеры<br />
+              и <span className="text-[#1E3FBF]">клапаны</span>
+            </h2>
+            <p className="mt-5 max-w-2xl text-lg leading-relaxed text-white/65">
+              Точные соединения для тормозных, топливных и воздушных систем. Там, где важны размер, резьба, форма и совместимость — мы знаем ассортимент и помогаем подобрать нужное.
+            </p>
+          </div>
+
+          {/* Сетка: категории + экспертный блок */}
+          <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
+
+            {/* Левая — категории товаров */}
+            <div className="grid gap-4 sm:grid-cols-2">
+              {[
+                {
+                  icon: 'GitMerge',
+                  title: 'Фитинги',
+                  text: 'Прямые, угловые, тройники — для тормозных, топливных и воздушных магистралей',
+                  detail: 'BSP, NPT, метрик',
+                },
+                {
+                  icon: 'Plug',
+                  title: 'Штуцеры',
+                  text: 'Под разные диаметры шланга и типы резьбы, в том числе редкие исполнения',
+                  detail: 'М8–М22 и выше',
+                },
+                {
+                  icon: 'MinusCircle',
+                  title: 'Пробки и заглушки',
+                  text: 'Резьбовые, конические, резиновые — для временной или постоянной герметизации',
+                  detail: 'Сталь / латунь / пластик',
+                },
+                {
+                  icon: 'Gauge',
+                  title: 'Клапаны',
+                  text: 'Обратные, предохранительные, шаровые — под давление в пневмо- и гидросистемах',
+                  detail: 'до 40 бар',
+                },
+                {
+                  icon: 'Wrench',
+                  title: 'Ремкомплекты',
+                  text: 'Уплотнения, прокладки, о-ринги — восстановление соединений без замены узла',
+                  detail: 'NBR / EPDM / Viton',
+                },
+                {
+                  icon: 'ArrowLeftRight',
+                  title: 'Переходники',
+                  text: 'Позволяют стыковать системы с разными стандартами и диаметрами без переделки',
+                  detail: 'Дюйм / метрик / JIC',
+                },
+              ].map((cat) => (
+                <div
+                  key={cat.title}
+                  className="group relative overflow-hidden rounded-xl border border-white/8 bg-[#242428] p-5 transition-all hover:border-[#1E3FBF]/40 hover:-translate-y-0.5"
+                >
+                  <div className="mb-3 flex items-center justify-between">
+                    <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#1E3FBF]/15 text-blue-400 transition-colors group-hover:bg-[#1E3FBF] group-hover:text-white">
+                      <Icon name={cat.icon} size={18} />
+                    </span>
+                    <span className="rounded bg-white/5 px-2 py-0.5 text-[10px] font-mono text-white/35">{cat.detail}</span>
+                  </div>
+                  <div className="font-heading text-sm font-bold uppercase tracking-wide text-white">{cat.title}</div>
+                  <div className="mt-1.5 text-xs leading-relaxed text-white/50">{cat.text}</div>
+                  <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-[#1E3FBF] transition-all duration-300 group-hover:w-full" />
+                </div>
+              ))}
+            </div>
+
+            {/* Правая — экспертный акцент */}
+            <div className="flex flex-col gap-5">
+              <div className="overflow-hidden rounded-2xl border border-white/10">
+                <img
+                  src="https://cdn.poehali.dev/projects/8c4cf80a-9349-4672-946e-4b6b406c6262/files/d1e7118d-34a3-4fac-8c91-dafdd2212986.jpg"
+                  alt="Фитинги и штуцеры"
+                  className="h-52 w-full object-cover"
+                />
+              </div>
+
+              {/* Экспертный текстовый блок */}
+              <div className="rounded-xl border border-[#1E3FBF]/25 bg-[#1E3FBF]/8 p-6">
+                <div className="mb-3 flex items-center gap-2">
+                  <Icon name="ShieldCheck" size={18} className="text-blue-400" />
+                  <span className="font-heading text-sm font-bold uppercase tracking-wide text-blue-300">Почему это важно</span>
+                </div>
+                <p className="text-sm leading-relaxed text-white/70">
+                  В фитингах и штуцерах нет «примерно подходит». Неправильная резьба или диаметр — утечка, отказ системы, простой. Мы комплектуем ассортимент с пониманием этих требований.
+                </p>
+                <div className="mt-5 space-y-2.5">
+                  {[
+                    'Правильный подбор по резьбе и давлению',
+                    'Позиции под тормозные и топливные системы',
+                    'Совместимость с импортными и отечественными узлами',
+                  ].map((p) => (
+                    <div key={p} className="flex items-start gap-2.5 text-sm text-white/65">
+                      <Icon name="Check" size={15} className="mt-0.5 shrink-0 text-blue-400" />
+                      {p}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* CTA */}
+              <a
+                href="#lead"
+                className="group inline-flex items-center justify-center gap-2 rounded-xl bg-[#1E3FBF] px-6 py-4 text-sm font-bold text-white shadow-lg shadow-blue-900/30 transition-transform hover:-translate-y-0.5"
+              >
+                <Icon name="FileText" size={16} />
+                Получить прайс на фитинги и клапаны
+                <Icon name="ArrowRight" size={16} className="transition-transform group-hover:translate-x-1" />
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       <div id="lead" className="container py-20 text-center text-white/30">
         <Icon name="ChevronDown" size={28} className="mx-auto animate-bounce" />
         <p className="mt-2 text-sm">Следующие блоки — по мере поступления</p>
