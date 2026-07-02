@@ -547,6 +547,90 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Блок 6 — Desire: Электросоединения */}
+      <section className="bg-[#242428] py-20 lg:py-28">
+        <div className="container">
+          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+
+            {/* Левая — фото */}
+            <div className="relative order-2 lg:order-1">
+              <div className="overflow-hidden rounded-2xl border border-white/10">
+                <img
+                  src="https://cdn.poehali.dev/projects/8c4cf80a-9349-4672-946e-4b6b406c6262/files/9815a59e-87b6-46a2-909c-e8aaa67da646.jpg"
+                  alt="Автоэлектрика и электросоединения"
+                  className="h-80 w-full object-cover lg:h-[460px]"
+                />
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-[#242428]/70 via-transparent to-transparent" />
+              </div>
+
+              {/* Плашка поверх */}
+              <div className="absolute bottom-5 left-5 right-5 rounded-xl border border-white/10 bg-[#242428]/85 p-4 backdrop-blur-sm">
+                <div className="mb-2 text-xs font-semibold uppercase tracking-widest text-white/40">Позиции в ассортименте</div>
+                <div className="flex flex-wrap gap-2">
+                  {['Кнопки', 'Выключатели', 'Колодки', 'Патроны', 'Держатели предохранителей', 'Разъёмы'].map((tag) => (
+                    <span key={tag} className="rounded-md border border-[#CC2222]/30 bg-[#CC2222]/10 px-2.5 py-1 text-xs font-medium text-red-300">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Правая — текст */}
+            <div className="order-1 lg:order-2">
+              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#CC2222]/40 bg-[#CC2222]/10 px-4 py-1.5 text-sm font-medium text-red-400">
+                <Icon name="Zap" size={14} />
+                Дополняет основной заказ
+              </div>
+
+              <h2 className="font-heading text-3xl font-bold uppercase leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
+                Электро&shy;соединения<br />
+                и <span className="text-[#CC2222]">автоэлектрика</span>
+              </h2>
+
+              <p className="mt-5 text-lg leading-relaxed text-white/65">
+                Всё необходимое для автоэлектрики и мелкого ремонта — в одном заказе с основным ассортиментом. Удобно добрать к хомутам, шлангам и пневматике, не открывая отдельного поставщика.
+              </p>
+
+              {/* Акцент-плашка */}
+              <div className="mt-6 rounded-xl border border-[#CC2222]/25 bg-[#CC2222]/8 p-5">
+                <div className="flex items-start gap-3">
+                  <Icon name="TrendingUp" size={20} className="mt-0.5 shrink-0 text-red-400" />
+                  <p className="text-sm leading-relaxed text-white/75">
+                    <span className="font-semibold text-white">Повышает средний чек:</span> клиент приходит за хомутами — уходит с электрикой. Позиции мелкие, но востребованные каждый день.
+                  </p>
+                </div>
+              </div>
+
+              {/* Выгоды */}
+              <div className="mt-7 space-y-4">
+                {[
+                  { icon: 'Wrench', text: 'Товары для автоэлектрики и мелкого ремонта — закрывают частые запросы СТО' },
+                  { icon: 'ShoppingCart', text: 'Удобны для добора в заказ — небольшой объём, высокая маржа' },
+                  { icon: 'Store', text: 'Актуальны для автомагазинов: хорошо продаются в розницу и под заказ' },
+                ].map((item) => (
+                  <div key={item.text} className="flex items-start gap-3">
+                    <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-[#CC2222]/15 text-red-400">
+                      <Icon name={item.icon} size={16} />
+                    </span>
+                    <span className="text-sm leading-relaxed text-white/65">{item.text}</span>
+                  </div>
+                ))}
+              </div>
+
+              <a
+                href="#lead"
+                className="group mt-8 inline-flex items-center gap-2 rounded-md bg-[#CC2222] px-7 py-4 text-base font-bold text-white shadow-lg shadow-red-900/30 transition-transform hover:-translate-y-0.5"
+              >
+                Запросить прайс на электрику
+                <Icon name="ArrowRight" size={18} className="transition-transform group-hover:translate-x-1" />
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       <div id="lead" className="container py-20 text-center text-white/30">
         <Icon name="ChevronDown" size={28} className="mx-auto animate-bounce" />
         <p className="mt-2 text-sm">Следующие блоки — по мере поступления</p>
