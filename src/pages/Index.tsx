@@ -301,6 +301,120 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Блок 4 — Desire: Хомуты, шланги, патрубки */}
+      <section className="bg-[#242428] py-20 lg:py-28">
+        <div className="container">
+
+          {/* Шапка блока */}
+          <div className="mb-12 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+            <div className="max-w-2xl">
+              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#CC2222]/40 bg-[#CC2222]/10 px-4 py-1.5 text-sm font-medium text-red-400">
+                <Icon name="TrendingUp" size={14} />
+                Товар постоянного спроса
+              </div>
+              <h2 className="font-heading text-3xl font-bold uppercase leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
+                Хомуты, шланги<br />
+                и <span className="text-[#CC2222]">патрубки</span>
+              </h2>
+              <p className="mt-4 text-lg leading-relaxed text-white/65">
+                Ходовой расходник, который всегда нужен — от маленькой СТО до крупного автопарка. Широкий ряд позиций для ежедневных продаж и массовых заявок.
+              </p>
+            </div>
+            <a
+              href="#lead"
+              className="group inline-flex shrink-0 items-center gap-2 rounded-md border border-[#1E3FBF] bg-[#1E3FBF]/10 px-6 py-3.5 text-sm font-bold text-blue-300 transition-colors hover:bg-[#1E3FBF] hover:text-white"
+            >
+              <Icon name="Download" size={16} />
+              Скачать прайс по ассортименту
+              <Icon name="ArrowRight" size={16} className="transition-transform group-hover:translate-x-1" />
+            </a>
+          </div>
+
+          {/* Основной контент: фото + правая колонка */}
+          <div className="grid gap-8 lg:grid-cols-[1fr_1.1fr]">
+
+            {/* Фото */}
+            <div className="relative overflow-hidden rounded-2xl">
+              <img
+                src="https://cdn.poehali.dev/projects/8c4cf80a-9349-4672-946e-4b6b406c6262/files/e4822755-b5fc-4cf7-9349-4d4553b50075.jpg"
+                alt="Хомуты, шланги и патрубки"
+                className="h-full min-h-[320px] w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#242428]/90 via-transparent to-transparent" />
+              {/* Теги поверх фото */}
+              <div className="absolute bottom-5 left-5 right-5 flex flex-wrap gap-2">
+                {['Хомуты всех типов', 'Шланги', 'Патрубки', 'Силиконовые решения', 'Топливные шланги', 'Угловые элементы', 'Переходники'].map((tag) => (
+                  <span key={tag} className="rounded-md bg-ink/80 px-3 py-1 text-xs font-medium text-white/80 backdrop-blur-sm border border-white/10">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Правая колонка */}
+            <div className="flex flex-col gap-4">
+
+              {/* Выгоды */}
+              {[
+                {
+                  icon: 'Ruler',
+                  title: 'Большой размерный ряд',
+                  text: 'Диаметры от 6 до 200+ мм — хомуты и шланги под любую задачу в одном месте',
+                  color: 'blue',
+                },
+                {
+                  icon: 'RefreshCw',
+                  title: 'Ходовые расходники',
+                  text: 'Позиции постоянного спроса — регулярно пополняемый склад, без перебоев в поставках',
+                  color: 'red',
+                },
+                {
+                  icon: 'ShoppingCart',
+                  title: 'Для ежедневных продаж',
+                  text: 'Большой выбор позиций под розничный и оптовый оборот: закрываете полки и прайс одной закупкой',
+                  color: 'blue',
+                },
+                {
+                  icon: 'ClipboardList',
+                  title: 'Закрытие массовых заявок',
+                  text: 'Объёмные заявки от автопарков и снабженцев — обрабатываем быстро, весь нужный ассортимент в наличии',
+                  color: 'red',
+                },
+              ].map((item) => (
+                <div
+                  key={item.title}
+                  className="group flex items-start gap-4 rounded-xl border border-white/8 bg-ink p-5 transition-colors hover:border-white/15"
+                >
+                  <span className={`mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg ${item.color === 'blue' ? 'bg-[#1E3FBF]/20 text-blue-400' : 'bg-[#CC2222]/20 text-red-400'}`}>
+                    <Icon name={item.icon} size={18} />
+                  </span>
+                  <div>
+                    <div className="font-heading text-sm font-semibold uppercase tracking-wide text-white">{item.title}</div>
+                    <div className="mt-1 text-sm leading-relaxed text-white/55">{item.text}</div>
+                  </div>
+                </div>
+              ))}
+
+              {/* Мини-статистика */}
+              <div className="mt-1 grid grid-cols-3 gap-3">
+                {[
+                  { value: '500+', label: 'артикулов', color: 'text-[#1E3FBF]' },
+                  { value: 'всегда', label: 'в наличии', color: 'text-[#CC2222]' },
+                  { value: '6–200мм', label: 'размерный ряд', color: 'text-blue-300' },
+                ].map((s) => (
+                  <div key={s.label} className="rounded-xl border border-white/8 bg-ink p-4 text-center">
+                    <div className={`font-heading text-xl font-bold ${s.color}`}>{s.value}</div>
+                    <div className="mt-0.5 text-xs text-white/40">{s.label}</div>
+                  </div>
+                ))}
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
       <div id="lead" className="container py-20 text-center text-white/30">
         <Icon name="ChevronDown" size={28} className="mx-auto animate-bounce" />
         <p className="mt-2 text-sm">Следующие блоки — по мере поступления</p>
