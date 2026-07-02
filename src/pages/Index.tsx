@@ -19,15 +19,16 @@ const usps = [
 const Index = () => {
   return (
     <div className="min-h-screen bg-ink text-white font-sans antialiased">
-      <header className="relative z-20 border-b border-white/10 bg-steel/60 backdrop-blur-sm">
-        <div className="container flex items-center justify-between py-5">
-          <div className="flex items-center gap-2.5">
-            <div className="flex h-9 w-9 items-center justify-center rounded bg-flame">
-              <Icon name="Hexagon" size={20} className="text-ink" />
+      <header className="relative z-20 border-b border-white/10 bg-ink/90 backdrop-blur-sm">
+        <div className="container flex items-center justify-between py-4">
+          <div className="flex items-center gap-3">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-flame font-heading text-2xl font-bold text-ink leading-none">
+              А
             </div>
-            <span className="font-heading text-xl tracking-wide">
-              АЛЕКС<span className="text-flame"> ГРУП</span>
-            </span>
+            <div className="flex flex-col leading-tight">
+              <span className="font-heading text-lg font-bold uppercase tracking-widest text-white">Алекс Груп</span>
+              <span className="text-[10px] uppercase tracking-[0.2em] text-white/40">Оптовый поставщик автотоваров</span>
+            </div>
           </div>
           <a
             href="#lead"
@@ -44,7 +45,7 @@ const Index = () => {
           className="absolute inset-0 z-0 bg-cover bg-center opacity-30"
           style={{ backgroundImage: `url(https://cdn.poehali.dev/projects/8c4cf80a-9349-4672-946e-4b6b406c6262/files/53b6ed07-4bd2-42a4-812c-11ce78111d39.jpg)` }}
         />
-        <div className="absolute inset-0 z-0 bg-gradient-to-r from-ink via-ink/90 to-ink/60" />
+        <div className="absolute inset-0 z-0 bg-gradient-to-r from-ink via-ink/92 to-ink/55" />
 
         <div className="container relative z-10 grid gap-12 py-16 lg:grid-cols-[1.15fr_0.85fr] lg:py-24">
           <div className="animate-fade-in">
