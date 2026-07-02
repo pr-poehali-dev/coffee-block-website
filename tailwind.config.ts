@@ -23,9 +23,9 @@ export default {
 				sans: ['Golos Text', 'sans-serif'],
 			},
 			colors: {
-				ink: '#0F1E2E',
-				steel: '#1B3A5B',
-				flame: '#F26B21',
+				ink: '#111111',
+				steel: '#1A1A1A',
+				flame: '#E8B800',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
