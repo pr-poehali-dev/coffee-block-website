@@ -114,6 +114,89 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Блок 2 — Interest */}
+      <section className="bg-[#242428] py-20 lg:py-28">
+        <div className="container">
+
+          {/* Проблема клиента */}
+          <div className="mb-14 max-w-3xl">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#1E3FBF]/40 bg-[#1E3FBF]/10 px-4 py-1.5 text-sm font-medium text-blue-300">
+              <Icon name="AlertCircle" size={14} />
+              Знакомая ситуация?
+            </div>
+            <h2 className="font-heading text-3xl font-bold uppercase leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
+              Один поставщик —<br />
+              <span className="text-red-400">весь нужный ассортимент</span>
+            </h2>
+            <div className="mt-6 space-y-3">
+              {[
+                'Нужен поставщик с широким ассортиментом — чтобы не искать по всему рынку',
+                'Важно быстро закрывать запросы по ходовым и техническим позициям',
+                'Не хочется собирать один заказ у трёх–пяти поставщиков',
+              ].map((text) => (
+                <div key={text} className="flex items-start gap-3 text-white/65">
+                  <Icon name="X" size={18} className="mt-0.5 shrink-0 text-red-500/70" />
+                  <span className="text-base">{text}</span>
+                </div>
+              ))}
+            </div>
+            <div className="mt-8 flex items-start gap-3 rounded-xl border border-[#1E3FBF]/30 bg-[#1E3FBF]/10 p-5">
+              <Icon name="CheckCircle2" size={22} className="mt-0.5 shrink-0 text-blue-400" />
+              <p className="text-base font-medium text-white/90">
+                <span className="text-blue-300">Алекс Груп</span> закрывает все эти задачи в одном каталоге — 193+ товарных группы, от расходников до технически сложных позиций.
+              </p>
+            </div>
+          </div>
+
+          {/* Карточки преимуществ */}
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                icon: 'LayoutGrid',
+                title: 'Глубокий ассортимент',
+                text: '193+ товарных группы в 17 разделах — от расходников до редких позиций под запрос',
+                color: 'blue',
+              },
+              {
+                icon: 'Settings2',
+                title: 'Технически сложные группы',
+                text: 'Пневматика, фитинги, клапаны, штуцеры — позиции, которые сложно найти в одном месте',
+                color: 'red',
+              },
+              {
+                icon: 'RefreshCw',
+                title: 'Позиции для оборота',
+                text: 'Хомуты, шланги, соединители, электрика — ходовой товар всегда в наличии для регулярных закупок',
+                color: 'blue',
+              },
+              {
+                icon: 'Handshake',
+                title: 'Понятная работа для опта',
+                text: 'Чёткие условия, актуальный прайс, удобная коммуникация — без лишней бюрократии',
+                color: 'red',
+              },
+            ].map((card) => (
+              <div
+                key={card.title}
+                className="group relative overflow-hidden rounded-xl border border-white/8 bg-[#1C1C1E] p-6 transition-transform hover:-translate-y-1"
+              >
+                <div className={`mb-4 flex h-12 w-12 items-center justify-center rounded-lg ${card.color === 'blue' ? 'bg-[#1E3FBF]/20 text-blue-400' : 'bg-[#CC2222]/20 text-red-400'}`}>
+                  <Icon name={card.icon} size={22} />
+                </div>
+                <h3 className="font-heading text-base font-semibold uppercase tracking-wide text-white">
+                  {card.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-white/55">
+                  {card.text}
+                </p>
+                <div className={`absolute bottom-0 left-0 h-0.5 w-0 transition-all duration-300 group-hover:w-full ${card.color === 'blue' ? 'bg-[#1E3FBF]' : 'bg-[#CC2222]'}`} />
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
       <div id="lead" className="container py-20 text-center text-white/30">
         <Icon name="ChevronDown" size={28} className="mx-auto animate-bounce" />
         <p className="mt-2 text-sm">Следующие блоки — по мере поступления</p>
