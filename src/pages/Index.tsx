@@ -131,7 +131,7 @@ const Index = () => {
             <div className="mt-6 space-y-3">
               {[
                 'Нужен поставщик с широким ассортиментом — чтобы не искать по всему рынку',
-                'Важно быстро закрывать запросы по ходовым и техническим позициям',
+                'Важно быстро и максимально широко закрывать запросы клиентов',
                 'Не хочется собирать один заказ у трёх–пяти поставщиков',
               ].map((text) => (
                 <div key={text} className="flex items-start gap-3 text-white/65">
@@ -143,7 +143,7 @@ const Index = () => {
             <div className="mt-8 flex items-start gap-3 rounded-xl border border-[#1E3FBF]/30 bg-[#1E3FBF]/10 p-5">
               <Icon name="CheckCircle2" size={22} className="mt-0.5 shrink-0 text-blue-400" />
               <p className="text-base font-medium text-white/90">
-                <span className="text-blue-300">Алекс Груп</span> закрывает все эти задачи в одном каталоге — 193+ товарных группы, от расходников до технически сложных позиций.
+                <span className="text-blue-300">Алекс Груп</span> закрывает все эти задачи в одном каталоге — 193-и товарные группы, от расходников до технически сложных позиций.
               </p>
             </div>
           </div>
@@ -170,9 +170,9 @@ const Index = () => {
                 color: 'blue',
               },
               {
-                icon: 'Handshake',
-                title: 'Понятная работа для опта',
-                text: 'Чёткие условия, актуальный прайс, удобная коммуникация — без лишней бюрократии',
+                icon: 'PackageCheck',
+                title: 'Быстрое закрытие заявки',
+                text: 'Отвечаем в день обращения — актуальный прайс, наличие и условия без лишнего ожидания',
                 color: 'red',
               },
             ].map((card) => (
