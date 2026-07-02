@@ -39,7 +39,7 @@ const Index = () => {
         </div>
       </header>
 
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden min-h-[calc(100vh-73px)] flex flex-col justify-center">
         <div
           className="absolute inset-0 z-0 bg-cover bg-center opacity-30"
           style={{ backgroundImage: `url(https://cdn.poehali.dev/projects/8c4cf80a-9349-4672-946e-4b6b406c6262/files/53b6ed07-4bd2-42a4-812c-11ce78111d39.jpg)` }}
